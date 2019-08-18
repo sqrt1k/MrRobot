@@ -34,13 +34,13 @@ namespace MrRobot
         }
         public static void start()
         {
-            string trainfile = "X:/data.txt";
-            string outputFileName = "F:/MrRobot_2_0/MrRobot/bin/Debug/output.bin";
+            string trainfile = "F:/MrRobot_2_0/MrRobot/bin/Debug/data.txt";
+            string outputFileName = "F:/output.bin";
             var word2Vec = Word2VecBuilder.Create()
                 .WithTrainFile(trainfile)// Use text data to train the model;
                 .WithOutputFile(outputFileName)//Use to save the resulting word vectors / word clusters
                 .WithSize(300)//Set size of word vectors; default is 100
-                .WithSaveVocubFile("X:/list.txt")//The vocabulary will be saved to <file> //поменять
+                .WithSaveVocubFile("F:/MrRobot_2_0/MrRobot/bin/Debug/list.txt")//The vocabulary will be saved to <file> //поменять
                 .WithDebug(2)//Set the debug mode (default = 2 = more info during training)
                 .WithBinary(1)//Save the resulting vectors in binary moded; default is 0 (off) //поменять
                 .WithCBow(0)//Use the continuous bag of words model; default is 1 (use 0 for skip-gram model)
@@ -63,7 +63,7 @@ namespace MrRobot
         }
         static BestWord[] search(string s)
         {
-           var distance = new Distance("F:/MrRobot_2_0/MrRobot/bin/Debug/output.bin");
+           var distance = new Distance("F:/output.bin");
            BestWord[] bestwords = distance.Search(s);
             if (bestwords != null)
             {

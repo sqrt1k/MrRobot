@@ -22,7 +22,7 @@ namespace MrRobot
 
             //Начинаем создавать словарь
             Choices words = new Choices();
-            words.Add(new string[] { "ниже", "выше", "компьютер", "доброе утро компьютер", "спасибо компьютер", "компьютер включи музыку", "что такое", "спасибо хватит", "компьютер включи", "напиши" });
+            words.Add(new string[] { "ниже", "выше", "компьютер", "доброе утро компьютер", "спасибо компьютер", "компьютер включи музыку", "что такое", "спасибо хватит", "компьютер включи", "напиши", "скажи привет" });
 
             Choices wiki = new Choices();
             s = System.IO.File.ReadAllLines("F:/MrRobot/bin/Debug/words.txt", Encoding.Default);
@@ -49,6 +49,7 @@ namespace MrRobot
                 //l.Text = e.Result.Text; //вывести на экран - то, что я сказал
                 //speechText.speech(e.Result.Text);// и произнести это
                 CommandClass.process(e.Result.Text);
+                speechText.speech(e.Result.Text);
                 /*
                 if (e.Result.Text == "доброе утро компьютер")
                 {
