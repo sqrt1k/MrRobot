@@ -24,6 +24,7 @@ namespace MrRobot
             notifyIcon.Visible = true;
             notifyIcon.ContextMenuStrip = contextMenuStrip1;
             */
+           
             Application.Run(new Form1());
         }
         private static void notifyIcon_Click(object sender, EventArgs e)

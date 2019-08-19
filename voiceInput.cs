@@ -9,8 +9,9 @@ namespace MrRobot
     class voiceInput
     {
         static string[] s; //вспомогательная переменная для словарей
-        static void voice()
+        public static void voice()
         {
+            consoleInput.getString("Запуск");
             System.Globalization.CultureInfo ci = new System.Globalization.CultureInfo("ru-ru");
             SpeechRecognitionEngine sre = new SpeechRecognitionEngine(ci);
             sre.SetInputToDefaultAudioDevice();

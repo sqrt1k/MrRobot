@@ -49,6 +49,12 @@ namespace MrRobot
                 s[i] = s[i].Replace("1", " ");
                 s[i] = s[i].Replace("2", " ");
                 s[i] = s[i].Replace("3", " ");
+                s[i] = s[i].Replace("4", " ");
+                s[i] = s[i].Replace("5", " ");
+                s[i] = s[i].Replace("6", " ");
+                s[i] = s[i].Replace("7", " ");
+                s[i] = s[i].Replace("8", " ");
+                s[i] = s[i].Replace("9", " ");
                 s[i] = s[i].Replace("(", " ");
                 s[i] = s[i].Replace("/", " ");
                 Console.WriteLine(s[i]);

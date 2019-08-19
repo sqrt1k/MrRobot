@@ -30,7 +30,7 @@ namespace MrRobot
             _notifyIcon.ContextMenuStrip = contextMenuStrip1;
             //подписываемся на событие клика по пункту меню "Выход"
             выходToolStripMenuItem.Click += new EventHandler(_exitToolStripMenuItem_Click);
-            
+
             /*System.Collections.ObjectModel.ReadOnlyCollection<InstalledVoice>
 
             voices = synthesizer.GetInstalledVoices();
@@ -39,7 +39,8 @@ namespace MrRobot
             {
                 MessageBox.Show(voice.VoiceInfo.Name);
             }*/
-             //
+            //
+         /////////////////////////////////////////////////////////////// voiceInput.voice();
         }
         void _exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -92,7 +93,7 @@ namespace MrRobot
 
         private void Form1_Shown(object sender, EventArgs e)
         {
-            this.Hide(); // скрывает основную форму
+            //this.Hide(); // скрывает основную форму
         }
 
         private void выходToolStripMenuItem_Click(object sender, EventArgs e)
